@@ -7,7 +7,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class PreloadService {
 
   loading: boolean;
-  hasError: boolean;
+  hasError: boolean = false;
   error: HttpErrorResponse;
 
   constructor() { }

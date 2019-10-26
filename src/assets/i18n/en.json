@@ -1,14 +1,17 @@
 {
   "Users": "Users",
   "User Form": "User Form",
+  "Unknown": "Unknown",
+
   "URL NOT FOUND": "URL NOT FOUND",
-
-
+  "Not Found": "Not Found",
+  "Server Error": "Server Error",
+  
   "languages": "Languages",
   "no-data": "There is no data",
   "go-home": "Go to Home",
-  "Not Found": "Not Found",
-  "Server Error": "Server Error",
+  "user-not-found": "User Not Found",
+  
   "paginator": {
     "items-per-page": "Items per page",
     "next-page": "Next page",

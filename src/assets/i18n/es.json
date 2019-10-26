@@ -1,20 +1,24 @@
 {
   "Users": "Usuarios",
   "User Form":"Fomulario Usuario",
+  "Unknown": "Desconocido",
+
   "URL NOT FOUND": "URL NO ENCONTRADA",
   "Not Found":"No Encontrado",
   "Server Error":"Error del Servidor",
-  "paginator":{
-    "items-per-page": "Elementos por página",
-    "next-page":"Siguiente",
-    "previous-page":"Anterior",
-    "first-page":"Primera",
-    "last-page":"Última"
-  },
 
   "languages":"Idiomas",
-  "no-data":"Sin Datos para mostrar",
+  "no-data":"Sin Datos para Mostrar",
   "go-home":"Ir al Home",
+  "user-not-found":"Usuario No Encontrado",
+
+  "paginator": {
+    "items-per-page": "Elementos por página",
+    "next-page": "Siguiente",
+    "previous-page": "Anterior",
+    "first-page": "Primera",
+    "last-page": "Última"
+  },
 
    "model-user":{
      "name":"Nombre",
