@@ -1,0 +1,17 @@
+<ol class="breadcrumbs">
+    <li>
+        <a mat-flat-button routerLink="/">
+          {{ 'breadcrumbs.home' | translate }}
+        </a>
+    </li>
+    <li *ngFor="let obj of list">
+         <a mat-flat-button routerLink="/{{obj.url}}" *ngIf="obj.url; else elseBlock">
+           {{ obj.name | translate }}
+         </a>
+         <ng-template #elseBlock>
+            <a mat-flat-button routerLink=".">
+              {{ obj.name | translate }}
+            </a>
+         </ng-template>
+    </li>
+</ol>

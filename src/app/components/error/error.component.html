@@ -1,0 +1,9 @@
+<div class="error-page">
+    <h1>{{status}}</h1>
+    <p>{{ statusText | translate }}</p>
+     <mat-chip-list class="mat-chip-list-stacked" aria-label="Color selection">
+       <mat-chip selected (click)="goToHome()">
+         {{ 'go-home' | translate }}
+       </mat-chip>
+     </mat-chip-list>
+</div>

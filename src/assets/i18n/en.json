@@ -1,0 +1,60 @@
+{
+  "Users": "Users",
+  "User Form": "User Form",
+  "URL NOT FOUND": "URL NOT FOUND",
+
+
+  "languages": "Languages",
+  "no-data": "There is no data",
+  "go-home": "Go to Home",
+  "Not Found": "Not Found",
+  "Server Error": "Server Error",
+  "paginator": {
+    "items-per-page": "Items per page",
+    "next-page": "Next page",
+    "previous-page": "Previous page",
+    "first-page": "First page",
+    "last-page": "Last page"
+  },
+
+
+  "model-user": {
+    "name": "Name",
+    "birthdate": "Birthdate"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "users": "Users"
+
+  },
+
+  "user": {
+    "header": "Users List",
+    "btn-new": "New User",
+    "filter": "Filter",
+    "user-deleted": "User deleted successfuly",
+    "user-created": "User created successfuly",
+    "user-update": "User updated successfuly"
+  },
+
+  "user-form": {
+    "header": "User Information",
+    "btn-save": "Save",
+    "choose-birthdate": "Choose your birthdate",
+    "name-required": "Name is required",
+    "birthdate-required": "Birthdate is required"
+
+  },
+
+  "user-detail": {
+    "header": "User Details",
+    "btn-new": "New User",
+    "btn-edit": "Edit",
+    "btn-delete": "Delete"
+  },
+
+
+  "footer": {
+    "develop-by": "Develop by"
+  }
+}

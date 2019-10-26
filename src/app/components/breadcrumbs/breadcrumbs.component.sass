@@ -1,0 +1,13 @@
+.breadcrumbs
+    display: flex
+    flex-direction: row
+    justify-content: flex-start 
+    padding: 16px
+    li
+        list-style: none
+        &::before            
+          content: "/"
+        &:first-child
+            &::before            
+                content: ""
+            

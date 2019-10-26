@@ -1,0 +1,58 @@
+<app-breadcrumbs [list]="breadcrumbs" *ngIf="breadcrumbs.length>0"></app-breadcrumbs>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ 'user.header' | translate }}
+      <a mat-raised-button color="primary" class="left" (click)="create()"
+        color="primary">{{ 'user.btn-new' | translate }}</a>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="{{ 'user.filter' | translate }}">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" matSort *ngIf="dataSource.data.length>0; else elseBlock">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>{{ 'model-user.name' | translate }}</th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <!-- birthdate Column -->
+      <ng-container matColumnDef="birthdate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{ 'model-user.birthdate' | translate }} </th>
+        <td mat-cell *matCellDef="let element"> {{this.dateFormat(element.birthdate, "MM/DD/YYYY")}} </td>
+      </ng-container>
+
+      <!-- actions Column -->
+      <!-- Checkbox Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <a mat-icon-button (click)="detail(element)">
+            <mat-icon aria-hidden="false" aria-label="View">visibility</mat-icon>
+          </a>
+          <a mat-icon-button (click)="edit(element)">
+            <mat-icon aria-hidden="false" aria-label="Edit">edit</mat-icon>
+          </a>
+          <a mat-icon-button (click)="delete(element)">
+            <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+  <ng-template #elseBlock>
+    <mat-card-content>
+      <p>{{ 'no-data' | translate }}</p>
+    </mat-card-content>
+  </ng-template>
+
+</mat-card>

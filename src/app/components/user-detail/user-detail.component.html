@@ -1,0 +1,35 @@
+<app-breadcrumbs [list]="breadcrumbs" *ngIf="breadcrumbs.length>0"></app-breadcrumbs>
+<mat-card class="shipping-card" *ngIf="user; else elseBlock">
+  <mat-card-header>
+    <mat-card-title>{{ 'user-detail.header' | translate }}
+      <a mat-raised-button color="primary" class="left" (click)="create()"
+        color="primary">{{ 'user-detail.btn-new' | translate }}</a>
+      <a mat-raised-button color="primary" class="left" (click)="edit()"
+        color="primary">{{ 'user-detail.btn-edit' | translate }}</a>
+      <a mat-raised-button color="primary" class="left" (click)="delete()"
+        color="primary">{{ 'user-detail.btn-delete' | translate }}</a>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="content-detail">
+    <div class="mat-elevation-z1">
+      <div class="row">
+        <div class="col">
+          <p><strong>{{ 'model-user.name' | translate }}:</strong> {{user.name}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p><strong>{{ 'model-user.birthdate' | translate }}:</strong> {{this.dateFormat(user.birthdate, "MM/DD/YYYY")}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<ng-template #elseBlock>
+  <mat-card>
+    <mat-card-content>
+      <p>User not found</p>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

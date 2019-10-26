@@ -1,0 +1,13 @@
+<mat-sidenav-container class="sidenav-container">  
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+        <span (click)="goToHome()">User App</span>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="changeLang('en')">English</button>
+          <button mat-menu-item (click)="changeLang('es')">Español</button>
+        </mat-menu>
+        <button mat-button [matMenuTriggerFor]="menu">{{ "languages" | translate }}</button>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,63 @@
+{
+  "Users": "Usuarios",
+  "User Form":"Fomulario Usuario",
+  "URL NOT FOUND": "URL NO ENCONTRADA",
+  "Not Found":"No Encontrado",
+  "Server Error":"Error del Servidor",
+  "paginator":{
+    "items-per-page": "Elementos por página",
+    "next-page":"Siguiente",
+    "previous-page":"Anterior",
+    "first-page":"Primera",
+    "last-page":"Última"
+  },
+
+  "languages":"Idiomas",
+  "no-data":"Sin Datos para mostrar",
+  "go-home":"Ir al Home",
+
+   "model-user":{
+     "name":"Nombre",
+     "birthdate":"Fecha de Nacimiento"
+   },
+   "breadcrumbs":{
+     "home":"Inicio",
+     "users":"Usuarios"
+
+    },     
+   
+    "user": {
+      "header": "Listado de Usuarios",
+      "btn-new": "Nuevo Usuario",
+      "filter":"Filtro",
+      "user-deleted":"Usuario eliminado correctamente",
+      "user-created":"Usuario creado correctamente",
+      "user-updated":"Usuario actualizado correctamente"
+    },
+
+    "user-form": {
+      "header": "Formulario de Usuario",
+      "btn-save": "Salvar",
+      "choose-birthdate":"Seleccionar Fecha de Nacimiento",
+      "name-required":"El Nombre es requerido",
+      "birthdate-required":"La Fecha de Nacimiento es requerida"
+
+    },
+
+    "user-detail": {
+      "header": "Detalle de Usuario",
+      "btn-new": "Nuevo",
+      "btn-edit": "Editar",
+      "btn-delete": "Eliminar"
+    }, 
+
+
+
+
+
+
+
+    "footer":{
+      "develop-by":"Desarrollado por"
+    }
+  }

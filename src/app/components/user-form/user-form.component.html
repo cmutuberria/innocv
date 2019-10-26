@@ -1,0 +1,40 @@
+
+<app-breadcrumbs [list]="breadcrumbs" *ngIf="breadcrumbs.length>0"></app-breadcrumbs>
+
+<form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>{{ 'user-form.header' | translate }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="{{'model-user.name'|translate}}" formControlName="name">
+            <mat-error *ngIf="userForm.controls['name'].hasError('required')">
+              {{ 'user-form.name-required' | translate }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput [matDatepicker]="birthdate" placeholder="{{'user-form.choose-birthdate'|translate}}"
+              formControlName="birthdate">
+            <mat-datepicker-toggle matSuffix [for]="birthdate"></mat-datepicker-toggle>
+            <mat-datepicker #birthdate></mat-datepicker>
+            <mat-error *ngIf="userForm.controls['birthdate'].hasError('required')">
+              {{ 'user-form.birthdate-required' | translate }}
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-flat-button (click)="loadUser()" *ngIf="userForm.value.id">
+        <mat-icon>undo</mat-icon>
+      </a>
+      <button mat-raised-button color="primary" type="submit"
+        [disabled]="!userForm.valid">{{ 'user-form.btn-save' | translate }}</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
